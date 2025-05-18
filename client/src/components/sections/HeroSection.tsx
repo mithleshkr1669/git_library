@@ -25,10 +25,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl mb-4">
-            Modern Study Library for Focused Learning
+            Gita Library for Focused Study
           </h1>
           <p className="text-lg md:text-xl opacity-90 mb-8">
-            A premium learning environment with dedicated spaces, modern amenities, and comfort for all students.
+            A premium learning environment with private cabins, air conditioning, and separate facilities for boys and girls.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 

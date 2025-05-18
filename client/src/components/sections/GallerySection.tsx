@@ -33,28 +33,20 @@ const GalleryItem = ({
 const GallerySection = () => {
   const galleryItems = [
     {
-      image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      title: "Main Reading Area"
+      image: "/cabin1.png",
+      title: "Individual Study Cabin"
     },
     {
-      image: "https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      title: "Private Study Cabins"
+      image: "/cabin2.png",
+      title: "Numbered Study Cabins"
     },
     {
-      image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      title: "Magazine & Newspaper Section"
+      image: "/cabin3.png",
+      title: "Personal Study Space"
     },
     {
-      image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      title: "Collaborative Study Space"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      title: "Quiet Reading Corners"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      title: "Computer Workstations"
+      image: "/library.png",
+      title: "Main Study Area"
     }
   ];
 

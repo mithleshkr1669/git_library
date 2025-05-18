@@ -1,4 +1,4 @@
-import { BookOpen, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { BookOpen, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -15,19 +15,13 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               A modern library designed for focused learning and academic success.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Instagram size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Linkedin size={18} />
-              </a>
+            <div className="flex items-center space-x-2 text-gray-400 mb-2">
+              <Phone size={14} />
+              <span className="text-sm">6206735381</span>
+            </div>
+            <div className="flex items-center space-x-2 text-gray-400">
+              <Mail size={14} />
+              <span className="text-sm">gitalibrarysector9@gmail.com</span>
             </div>
           </div>
 

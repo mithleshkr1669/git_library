@@ -26,7 +26,7 @@ const Header = () => {
         <div className="flex items-center space-x-2">
           <BookOpen className="text-primary h-6 w-6" />
           <h1 className="font-poppins font-bold text-xl text-dark">
-            StudyHaven<span className="text-primary">.</span>
+            Gita Library<span className="text-primary">.</span>
           </h1>
         </div>
         

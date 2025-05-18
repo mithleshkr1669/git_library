@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <BookOpen className="text-primary h-6 w-6" />
               <h2 className="font-poppins font-bold text-xl">
-                StudyHaven<span className="text-primary">.</span>
+                Gita Library<span className="text-primary">.</span>
               </h2>
             </div>
             <p className="text-gray-400 mb-4">

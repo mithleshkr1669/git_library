@@ -27,16 +27,16 @@ const HoursLocationSection = () => {
               <h3 className="font-poppins font-semibold text-xl mb-4">Opening Hours</h3>
               <ul className="space-y-3">
                 <li className="flex justify-between">
-                  <span className="text-gray-700">Monday - Friday</span>
-                  <span className="font-medium">7:00 AM - 10:00 PM</span>
+                  <span className="text-gray-700">Regular Days</span>
+                  <span className="font-medium">Open 24/7</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-gray-700">Saturday</span>
-                  <span className="font-medium">8:00 AM - 8:00 PM</span>
+                  <span className="text-gray-700">National Holidays</span>
+                  <span className="font-medium">Closed</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-gray-700">Sunday</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
+                  <span className="text-gray-700">Major Festivals</span>
+                  <span className="font-medium">Closed</span>
                 </li>
               </ul>
             </motion.div>
@@ -50,18 +50,18 @@ const HoursLocationSection = () => {
             >
               <h3 className="font-poppins font-semibold text-xl mb-4">Address</h3>
               <p className="text-gray-700 mb-4">
-                123 Academic Avenue<br />
-                Knowledge District<br />
-                Learningville, ED 54321
+                Sector-9/A, Street 7, Thana More<br />
+                Near Ranvijay Smarak High School and BSL +2 High School<br />
+                Bokaro Steel City, Jharkhand 827009
               </p>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 mb-4">
                 <div className="flex items-center">
                   <Phone className="text-primary w-4 h-4 mr-2" />
-                  <span>(555) 123-4567</span>
+                  <span>6206735381</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="text-primary w-4 h-4 mr-2" />
-                  <span>info@studyhaven.edu</span>
+                  <span>gitalibrarysector9@gmail.com</span>
                 </div>
               </div>
               <a href="#contact" className="text-primary hover:underline font-medium inline-flex items-center">

@@ -31,21 +31,22 @@ const GalleryItem = ({
 };
 
 const GallerySection = () => {
+  // Using direct image paths to attached assets
   const galleryItems = [
     {
-      image: "/cabin1.png",
+      image: "/images/image_1747588986143.png",
       title: "Individual Study Cabin"
     },
     {
-      image: "/cabin2.png",
+      image: "/images/image_1747589005822.png",
       title: "Numbered Study Cabins"
     },
     {
-      image: "/cabin3.png",
+      image: "/images/image_1747589023635.png",
       title: "Personal Study Space"
     },
     {
-      image: "/library.png",
+      image: "/images/image_1747589052219.png",
       title: "Main Study Area"
     }
   ];

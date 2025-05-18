@@ -21,35 +21,35 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-sm" : "bg-primary/90 backdrop-blur-sm"}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <BookOpen className="text-primary h-6 w-6" />
-          <h1 className="font-poppins font-bold text-xl text-dark">
-            Gita Library<span className="text-primary">.</span>
+          <BookOpen className={`${scrolled ? "text-primary" : "text-white"} h-6 w-6`} />
+          <h1 className={`font-poppins font-bold text-xl ${scrolled ? "text-dark" : "text-white"}`}>
+            Gita Library<span className={scrolled ? "text-primary" : "text-white/80"}>.</span>
           </h1>
         </div>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#home" className="text-dark hover:text-primary font-medium transition-colors">
+          <a href="#home" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
             Home
           </a>
-          <a href="#amenities" className="text-dark hover:text-primary font-medium transition-colors">
+          <a href="#amenities" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
             Amenities
           </a>
-          <a href="#gallery" className="text-dark hover:text-primary font-medium transition-colors">
+          <a href="#gallery" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
             Gallery
           </a>
-          <a href="#faq" className="text-dark hover:text-primary font-medium transition-colors">
+          <a href="#faq" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
             FAQs
           </a>
-          <a href="#contact" className="text-dark hover:text-primary font-medium transition-colors">
+          <a href="#contact" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
             Contact
           </a>
         </nav>
         
         <button 
-          className="md:hidden text-dark text-xl" 
+          className={`md:hidden ${scrolled ? "text-dark" : "text-white"} text-xl`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -69,35 +69,35 @@ const Header = () => {
             <nav className="flex flex-col space-y-3">
               <a 
                 href="#home" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-gray-100 rounded transition-colors"
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
                 onClick={handleLinkClick}
               >
                 Home
               </a>
               <a 
                 href="#amenities" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-gray-100 rounded transition-colors"
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
                 onClick={handleLinkClick}
               >
                 Amenities
               </a>
               <a 
                 href="#gallery" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-gray-100 rounded transition-colors"
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
                 onClick={handleLinkClick}
               >
                 Gallery
               </a>
               <a 
                 href="#faq" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-gray-100 rounded transition-colors"
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
                 onClick={handleLinkClick}
               >
                 FAQs
               </a>
               <a 
                 href="#contact" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-gray-100 rounded transition-colors"
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
                 onClick={handleLinkClick}
               >
                 Contact

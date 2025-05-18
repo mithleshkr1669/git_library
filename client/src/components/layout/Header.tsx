@@ -15,9 +15,20 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when clicking on a link
-  const handleLinkClick = () => {
+  // Navigate to a section and close the mobile menu
+  const navigateToSection = (sectionId: string) => {
     setIsMenuOpen(false);
+    
+    // Get the target element and scroll to it
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }, 300);
+    }
   };
 
   return (
@@ -31,21 +42,36 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#home" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
+          <button 
+            onClick={() => navigateToSection("home")} 
+            className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors bg-transparent`}
+          >
             Home
-          </a>
-          <a href="#amenities" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
+          </button>
+          <button 
+            onClick={() => navigateToSection("amenities")} 
+            className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors bg-transparent`}
+          >
             Amenities
-          </a>
-          <a href="#gallery" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
+          </button>
+          <button 
+            onClick={() => navigateToSection("gallery")} 
+            className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors bg-transparent`}
+          >
             Gallery
-          </a>
-          <a href="#faq" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
+          </button>
+          <button 
+            onClick={() => navigateToSection("faq")} 
+            className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors bg-transparent`}
+          >
             FAQs
-          </a>
-          <a href="#contact" className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors`}>
+          </button>
+          <button 
+            onClick={() => navigateToSection("contact")} 
+            className={`${scrolled ? "text-dark hover:text-primary" : "text-white hover:text-white/80"} font-medium transition-colors bg-transparent`}
+          >
             Contact
-          </a>
+          </button>
         </nav>
         
         <button 
@@ -67,41 +93,36 @@ const Header = () => {
             className="md:hidden bg-white py-4 px-4 absolute w-full shadow-md"
           >
             <nav className="flex flex-col space-y-3">
-              <a 
-                href="#home" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
-                onClick={handleLinkClick}
+              <button 
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors text-left w-full"
+                onClick={() => navigateToSection("home")}
               >
                 Home
-              </a>
-              <a 
-                href="#amenities" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
-                onClick={handleLinkClick}
+              </button>
+              <button 
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors text-left w-full"
+                onClick={() => navigateToSection("amenities")}
               >
                 Amenities
-              </a>
-              <a 
-                href="#gallery" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
-                onClick={handleLinkClick}
+              </button>
+              <button 
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors text-left w-full"
+                onClick={() => navigateToSection("gallery")}
               >
                 Gallery
-              </a>
-              <a 
-                href="#faq" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
-                onClick={handleLinkClick}
+              </button>
+              <button 
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors text-left w-full"
+                onClick={() => navigateToSection("faq")}
               >
                 FAQs
-              </a>
-              <a 
-                href="#contact" 
-                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors"
-                onClick={handleLinkClick}
+              </button>
+              <button 
+                className="text-dark hover:text-primary font-medium py-2 px-4 hover:bg-primary/10 rounded transition-colors text-left w-full"
+                onClick={() => navigateToSection("contact")}
               >
                 Contact
-              </a>
+              </button>
             </nav>
           </motion.div>
         )}

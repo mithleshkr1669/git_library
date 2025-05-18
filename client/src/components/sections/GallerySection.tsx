@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
 
 // Gallery item component with hover effect
-const GalleryItem = ({ 
-  image, 
-  title, 
-  delay = 0 
-}: { 
-  image: string, 
-  title: string, 
-  delay?: number 
+const GalleryItem = ({
+  image,
+  title,
+  delay = 0,
+}: {
+  image: string;
+  title: string;
+  delay?: number;
 }) => {
   return (
-    <motion.div 
+    <motion.div
       className="relative overflow-hidden rounded-xl group"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
     >
-      <img 
-        src={image} 
-        alt={title} 
+      <img
+        src={image}
+        alt={title}
         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
@@ -34,28 +34,28 @@ const GallerySection = () => {
   // Using direct image paths to attached assets
   const galleryItems = [
     {
-      image: "/images/image_1747588986143.png",
-      title: "Individual Study Cabin"
+      image: "/cabin1.png",
+      title: "Individual Study Cabin",
     },
     {
-      image: "/images/image_1747589005822.png",
-      title: "Numbered Study Cabins"
+      image: "/cabin2.png",
+      title: "Numbered Study Cabins",
     },
     {
-      image: "/images/image_1747589023635.png",
-      title: "Personal Study Space"
+      image: "/cabin3.png",
+      title: "Personal Study Space",
     },
     {
-      image: "/images/image_1747589052219.png",
-      title: "Main Study Area"
-    }
+      image: "/library.png",
+      title: "Main Study Area",
+    },
   ];
 
   return (
     <section id="gallery" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <motion.h2 
+          <motion.h2
             className="font-poppins font-bold text-3xl md:text-4xl text-dark mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ const GallerySection = () => {
           >
             Gallery
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-gray-600 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,10 +74,10 @@ const GallerySection = () => {
             Take a visual tour of our modern library facilities.
           </motion.p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {galleryItems.map((item, index) => (
-            <GalleryItem 
+            <GalleryItem
               key={index}
               image={item.image}
               title={item.title}
